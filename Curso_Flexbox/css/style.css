@@ -2,12 +2,12 @@
     background-color: #ccc;
     height: 500px;
     display: flex;
-    /*flex-direction: row-reverse; /* row | column | row-reverse | column-reverse */
-    /*flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
-    flex-flow: row wrap; /* flex-flow: flex-drection flex-wrap */
-    justify-content: flex-end; /* flex-start | flex-end | center | space-between | space-around */
-    align-items: baseline; /* stretch | flex-start | flex-end | baseline */
-    align-content: flex-start; /* Alinhamento vertical quando os itens tiverem uma quebra */ /* flex-start | flex-end | center | space-between | space-around | stretch */
+    flex-direction: row; /* row | column | row-reverse | column-reverse */
+    flex-wrap: nowrap; /* nowrap | wrap | wrap-reverse */
+    /*flex-flow: row wrap; /* flex-flow: flex-drection flex-wrap */
+    justify-content: flex-start; /* flex-start | flex-end | center | space-between | space-around */
+    align-items: stretch; /* stretch | flex-start | flex-end | baseline */
+    /*align-content: flex-start; /* Alinhamento vertical quando os itens tiverem uma quebra */ /* flex-start | flex-end | center | space-between | space-around | stretch */
 }
 
 .item {
@@ -15,11 +15,22 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    width: 200px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+
+    /*flex-grow: 1; /* 0 - Cada um tem sua largura normal / 1 - Todos os itens tem o mesmo valor */
+    /*flex-basis: 300px; /* Largura inicial dos itens */
+    /*flex-shrink: 1;*/
+
+    flex: 1 1 300px; /* Nessa ordem - flex-grow flex-shrink flex-basis */
 }
 
 .article-01 {
-    padding-top: 40px;
-    background-color: red;
+    /*order: 3; /* Define a ordem que vai aparecer */
+    /*flex-grow: 3; /* Ocupa 3 vezes mais o espaço extra do que os outros itens */
+    flex-shrink: 3; /* Assume 1 tamanho 3 vezes menor que os outros */
+}
+
+.article-02 {
+    align-self: center; /* Não funciona se o align-content estiver definido no container pai, pois os itens assumirão o valor colocado lá */
 }
