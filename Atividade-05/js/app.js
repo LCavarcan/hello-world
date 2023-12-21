@@ -73,7 +73,7 @@ document.getElementById("conteudo").removeChild(p)
 
 console.log(
     document.documentElement.lastChild
-)*/
+)
 
 console.log(
     document.body.childNodes
@@ -84,3 +84,40 @@ alert(lista.length)
 alert(lista[5].innerHTML)
 alert(lista[5].nodeType) //1 - Nó de elemento 2 - Nó de atributo 3 - Nó de texto 8 - Nó de comentário
 alert(lista[3].nodeValue)
+
+//Tipos de dados
+
+//String
+var nome = "Luiza Guimaraes Cavarcan"
+
+//Number
+var idade  = 50//.50 -> float
+
+//boolean
+var solteira = true
+
+//Array
+var frutas = ["Laranja", "Goiaba", "Maça"] //Typeof = object
+
+//object
+var carro = new Object()
+carro.fabricacao = "2025"
+carro.cor = "azul"
+
+//Function
+var soma = function(a, b) {return a+b}
+
+alert(typeof(soma(8,9)))
+
+let meuarray = ["notebook", "mouse"]
+
+console.log(meuarray)*/
+
+let pessoa = {
+    nome: "Luiza",
+    idade: 19,
+    feliz: true,
+    pets: ["cachorro", "Laura"]
+}
+
+console.log(pessoa.pets[0])
